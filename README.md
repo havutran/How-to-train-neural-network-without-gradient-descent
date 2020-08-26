@@ -1,4 +1,10 @@
-# How to train neural networks without backpropagation
+# How to train neural networks without gradient descent
+
+Stochastic gradient descent is a universal choice for optimizing deep learning models. However, it is not the only option [R1].
+
+[R1] [Lil'Log - Evolution Strategies ](https://lilianweng.github.io/lil-log/2019/09/05/evolution-strategies.html)
+
+[R2] [Evolution Strategies as a Scalable Alternative to Reinforcement Learning](https://arxiv.org/abs/1703.03864)
 
 We start by importing the needed libraries.
 
