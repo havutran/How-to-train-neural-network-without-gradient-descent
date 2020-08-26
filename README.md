@@ -19,6 +19,7 @@ We start by importing the needed libraries.
 ```
 import numpy as np
 from numba import jit
+from timeit import defaut_timer as timer
 ```
 
 Now, we define the structure of the neural network. We consider a fully-connected neural network having two hidden layers. 
