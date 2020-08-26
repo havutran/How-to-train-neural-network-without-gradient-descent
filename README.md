@@ -109,3 +109,13 @@ start = timer()
 w = ES_DL()
 print("Execution time:", timer()-start) 
 ```
+
+The obtained result is
+```
+At i = 4999
+NMSE = 0.0001287464438334327
+Execution time: 585.0522013
+```
+which is not bad at all.
+
+Note that this is just a simple example and the performance can be further improved by tuning hyper-parameters properly.
