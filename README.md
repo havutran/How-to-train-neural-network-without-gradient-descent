@@ -4,7 +4,7 @@
 
 Indeed, stochastic gradient descent is a well-known technique and has been considered as a universal choice for optimizing deep learning models. However, it is not the only one [R1].
 
-In this post, we will discuss about how to train neural networks without gradient descent. Alternatively, a method, so-called evolution strategies (ES), is promoted as a solution. It has been gaining significant attention from the research community due to its simplicity and efficiency in dealing with RL problems [R2].
+In this post, we will discuss about how to train neural networks without gradient descent. Alternatively, a method, so-called evolution strategies (ES), is promoted as a solution. It has been gaining significant attention from the research community due to its simplicity and efficiency in dealing with Reinforcement Learning problems [R2].
 
 In principle, the ES algorithm belongs to a category of population-based optimization methods, motivated by natural selection. Natural selection gives credence to the following: the individuals with characteristics helpful to their survival can outlast and then these characteristics will be transferred to the next generation. On this basis, each iteration of ES consists of two phases: (i) generating a population of actions, and (ii) observing the returned reward and selecting "elite" actions that well fit the objective to make an update for the next iteration.
 
