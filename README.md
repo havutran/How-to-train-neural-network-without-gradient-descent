@@ -49,7 +49,7 @@ As you can see, we are going to train a neural network to approximate the second
 Here, we define a function to calculate the ouput based on the input, weight matrices, and bias coefficients.
 ```
 #forward propagation
-@jit(nopython=True, parallel=True)
+@jit
 def predict(s,w1,w2,w3,b1,b2):
     h1 = np.dot(w1, s) + b1 #input to hidden layer 1        
     h1 = np.where(h1 < 0, h1, 0) #relu                      
@@ -63,7 +63,7 @@ def predict(s,w1,w2,w3,b1,b2):
 Following to the principle of evolution strategies, a reward function is needed and is defined, in this example, as an inverse of NMSE. This means that a lower NMSE gives a higher reward score. 
 ```
 #reward function
-@jit(nopython=True, parallel=True)
+@jit
 def f(out): return np.linalg.norm(x)**2/np.linalg.norm(out-x)**2
 ```
 
@@ -75,7 +75,7 @@ sigma = 0.01    # noise standard deviation
 alpha = 0.0001  # learning rate
 
 
-@jit(nopython=True, parallel=True)
+@jit
 def ES_DL():
     w = np.random.randn(NumWeights1 + NumWeights2 + NumWeights3 + HL1 + HL2)
     for i in range(5000):
