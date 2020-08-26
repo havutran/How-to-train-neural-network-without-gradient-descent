@@ -8,7 +8,7 @@ In this post, we will discuss about how to train neural networks without gradien
 
 In principle, the ES algorithm belongs to a category of population-based optimization methods, motivated by natural selection. Natural selection gives credence to the following: the individuals with characteristics helpful to their survival can outlast and then these characteristics will be transferred to the next generation. On this basis, each iteration of ES consists of two phases: (i) generating a population of actions, and (ii) observing the returned reward and selecting "elite" actions that well fit the objective to make an update for the next iteration.
 
-Some advantages of ES was discussed in [R3]
+Some advantages of ES were discussed in [R3]
 
 #### References
 [R1] [Lil'Log - Evolution Strategies ](https://lilianweng.github.io/lil-log/2019/09/05/evolution-strategies.html)
