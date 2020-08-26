@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Recently, stochastic gradient descent is a well-known technique and has been considered as a universal choice for optimizing deep learning models. However, it is not the only one [R1].
+Recently, stochastic gradient descent is a well-known technique and has been considered as a universal choice for optimizing deep learning models. However, it is not the only choice [R1].
 
 In this post, we will discuss about how to train neural networks without gradient descent. Alternatively, a method, so-called evolution strategies (ES), is promoted as a solution. It has been gaining significant attention from the research community due to its simplicity and efficiency in dealing with Reinforcement Learning problems [R2].
 
