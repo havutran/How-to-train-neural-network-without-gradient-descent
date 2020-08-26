@@ -49,21 +49,19 @@ def predict(s,w1,w2,w3,b1,b2):
 Following to the principle of evolution strategies, a reward function is needed and is defined, in this example, as an inverse of NMSE. This means that a lower NMSE gives a higher reward score. 
 ```
 #reward function
-@jit
-#(nopython=True, parallel=True)
+@jit(nopython=True, parallel=True)
 def f(out): return np.linalg.norm(x)**2/np.linalg.norm(out-x)**2
 ```
 
 
-Now, we train the neural network using evolution strategies
+Below is how we train the neural network using evolution strategies
 ```
 npop = 100    # population size
 sigma = 0.01    # noise standard deviation
 alpha = 0.0001  # learning rate
 
 
-@jit
-#(nopython=True, parallel=True)
+@jit(nopython=True, parallel=True)
 def ES_DL():
     w = np.random.randn(NumWeights1 + NumWeights2 + NumWeights3 + HL1 + HL2)
     for i in range(5000):
@@ -103,4 +101,11 @@ def ES_DL():
         print('At i =', i) 
         print('NMSE =',1/f(out_test))
     return w
-    ```
+```
+    
+Now, let's run the program and measure the execution time if needed
+```
+start = timer() 
+w = ES_DL()
+print("Execution time:", timer()-start) 
+```
